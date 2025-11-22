@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>ヤマトAPI 送り状作成</title>
+  <script src="yamato_api_main.js" defer></script>
+  <style>
+    body { font-family: sans-serif; padding: 20px; }
+    table { border-collapse: collapse; margin-top: 10px; }
+    th, td { border: 1px solid #ccc; padding: 5px 10px; }
+  </style>
+</head>
+<body>
+  <h2>ヤマトAPI 送り状作成</h2>
+
+  <table>
+    <thead>
+      <tr><th>選択</th><th>注文番号</th><th>氏名</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><input type="checkbox" name="order" value="TEST001"></td>
+        <td>TEST001</td><td>山田太郎テスト</td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" name="order" value="TEST002"></td>
+        <td>TEST002</td><td>佐藤花子テスト</td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" name="order" value="TEST003"></td>
+        <td>TEST003</td><td>鈴木一郎テスト</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <button id="sendBtn" style="margin-top:10px;">送り状を作成</button>
+
+  <div id="result" style="margin-top:20px;"></div>
+</body>
+</html>

@@ -1,0 +1,9 @@
+SELECT 
+*
+FROM 
+	php_personal_information A
+		INNER JOIN php_pi_sales_history B
+			 ON concat(LPAD(A.idxnum,10,'0'),p_year) = B.picd
+			AND B.delflg=0
+WHERE
+	A.delflg=0;
